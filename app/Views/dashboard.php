@@ -8,6 +8,7 @@
                         <hr>
                            <div class"row">
                            <div class="col-12 col-sm-4">
+                           <form method="POST" action="/administrar">
                            <button type="submit" class="btn btn-primary">Administra tus filas</Button>
                            </div>
                            <div class"row">

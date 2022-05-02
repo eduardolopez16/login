@@ -25,13 +25,18 @@
                             </div>
                             </div>
                                 <?php endif;?>
-                    </div>                                        
-                  <div class"row">
+                                 </div>
+                                <div class"row">
                            <div class="col-12 col-sm-4">
-                           <button type="submit" class="btn btn-primary">Registrar</Button>
-                           </div>
-                  </div>  
-             </form>
+                           <button type="submit" class="btn btn-primary">Registrar</Button>                          
+
+                           </form>
+                           
+                       <form method="POST" action="/dashboard">
+                       <button type="submit" class="btn btn-primary">Volver</Button>
+                       </form>
+                      </div>
+                </div>
          </div>
        </div>
    </div>

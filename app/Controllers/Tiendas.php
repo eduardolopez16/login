@@ -23,7 +23,8 @@ class Tiendas extends BaseController
             if (! $this->validate($rules)) {
                 $data['validation']= $this->validator;
             }else{	
-			$model = new TiendasModel();
+				$model = new TiendasModel();
+
             
 			$newData = [
 			'tienda' => $this->request->getVar('tienda'),
@@ -33,13 +34,13 @@ class Tiendas extends BaseController
 		$model->save($newData);
 		$session = session();
 		$session->setFlashdata('success', 'Registro Listo');
-		//return redirect()->to('/');
+		return redirect()->to('/');
 
 
 	         }
 	   
 			}
-			echo view ('templates/header');
+			echo view ('templates/header', $data);
 			echo view ('tiendas');
 			echo view ('templates/footer');
 	}
