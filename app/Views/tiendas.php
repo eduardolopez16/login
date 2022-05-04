@@ -4,6 +4,10 @@
          <div class="container">
              <h3>Registra tu tienda</h3>
               <hr>
+              <?php if (session()->get('success')): ?>
+                  <div class="alert alert-success" role="alert">
+                 <?= session()->get('success') ?>
+                 <?php endif; ?> 
                 <form class="" action="/tiendas" method="post">
                   <div class="row">
                         <div class="col-12 col-sm-6">

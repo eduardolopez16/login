@@ -5,14 +5,22 @@
                 <div class="container">    
                     <h3>Administra Tus filas</h3>
                         <hr>
-                           <div class="d-grid gap-3 mb-3">
+                        
+                            <div class = "col-4">
+
                            <form method="POST" action="/tiendas">
                            <button type="submit" class="btn btn-primary">Crea tu tienda</Button> 
 </form>        
+                           <form method="POST" action="/tustiendas">
+                           <button type="submit" class="btn btn-primary">Tus Tiendas</Button>
+</form>
+                           <form method="POST" action="/tusfilas">
+                           <button type="submit" class="btn btn-primary">Tus Filas</Button>
+</form>
                            <form method="POST" action="/dashboard">
                            <button type="submit" class="btn btn-primary">Volver</Button>
-                           </div>
 </form>
+
                  </div>            
 
         </div>

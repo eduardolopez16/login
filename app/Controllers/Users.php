@@ -117,8 +117,8 @@ class Users extends BaseController
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
-				'firstname' => 'required|min_length[3]|max_length[20]',
-				'lastname' => 'required|min_length[3]|max_length[20]',
+				'nombre' => 'required|min_length[3]|max_length[20]',
+				'apellido' => 'required|min_length[3]|max_length[20]',
 				];
 
 			if($this->request->getPost('password') != ''){
@@ -133,15 +133,15 @@ class Users extends BaseController
 
 				$newData = [ 
 					'id' => session()->get('id'),
-					'firstname' => $this->request->getPost('firstname'),
-					'lastname' => $this->request->getPost('lastname'),
+					'nombre' => $this->request->getPost('nombre'),
+					'apellido' => $this->request->getPost('apellido'),
 					];
 					if($this->request->getPost('password') != ''){
 						$newData['password'] = $this->request->getPost('password');
 					}
 				$model->save($newData);
 
-				session()->setFlashdata('success', 'Successfuly Updated');
+				session()->setFlashdata('success', 'Actualizado Correctamente');
 				return redirect()->to('/profile');
 
 			}

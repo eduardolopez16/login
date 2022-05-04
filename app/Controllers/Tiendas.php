@@ -8,6 +8,10 @@ class Tiendas extends BaseController
 {
 
 	public function tiendas(){
+
+		if(!session()->get('isLoggedIn'))
+        redirect()->to('/');
+
 		$data =[];
         helper(['form']);
 
@@ -33,8 +37,11 @@ class Tiendas extends BaseController
 		];
 		$model->save($newData);
 		$session = session();
-		$session->setFlashdata('success', 'Registro Listo');
+		$session->setFlashdata('success', 'Tienda Registrada');
 		return redirect()->to('/');
+
+		$data['user'] = $model->where('id', session()->get('id'))->first();
+
 
 
 	         }
