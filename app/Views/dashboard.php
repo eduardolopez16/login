@@ -4,26 +4,22 @@
             <h1>Bienvenido  a saltate la fila <?=session()->get('nombre')?></h1>
 
                 <div class="container">    
-                    <h3>Dashboard</h3>
+                    
                         <hr>
                            <div class"row">
-                           <div class="col-12 col-sm-4">
-                           <form method="POST" action="/administrar">
-                           <button type="submit" class="btn btn-primary">Administra tus filas</Button>
-                           </div>
-                           <div class"row">
-                           <div class="col-12 col-sm-4">
-                           <button type="submit" class="btn btn-primary">Cuenta</Button>
-                           </div>
-                           <div class"row">
-                           <div class="col-12 col-sm-4">
-                           <button type="submit" class="btn btn-primary">Publica tus filas</Button>
-                           </div>
-                           <div class"row">
-                           <div class="col-12 col-sm-4">
-                           <button type="submit" class="btn btn-primary">Monitoreo</Button>
-                           </div>
-                         </div>
+                               
+                            <a href="/Administrar"><button type="button" class="btn btn-primary">Administra tus filas</button></a>
+
+                            <a href="/profile"><button type="button" class="btn btn-primary">Usuario</button></a>
+
+                            <a href="/tusfilas"><button type="button" class="btn btn-primary">Publica tus Filas</button></a>
+
+                            <a href="/operadorfilas"><button type="button" class="btn btn-primary">Operar Fila</button></a>
+
+                         
+
+                    </div>
+                         
          </div>            
 
         </div>

@@ -1,7 +1,6 @@
 <div class="container">
    <div class="row">
         <div class="col-12 col-sm10 offset-sm-2 col-md-6 offset-md-3 mt-5 pt-3 pb-3 bg-white from-wrapper">
-         <div class="container">
              <h3>Registra tu tienda</h3>
               <hr>
               <?php if (session()->get('success')): ?>
@@ -30,18 +29,17 @@
                             </div>
                                 <?php endif;?>
                                  </div>
-                                <div class"row">
-                           <div class="col-12 col-sm-4">
+                        
+                           <div class="col">
                            <button type="submit" class="btn btn-primary">Registrar</Button>                          
 
                            </form>
-                           
+                           <div class="col">
                        <form method="POST" action="/dashboard">
                        <button type="submit" class="btn btn-primary">Volver</Button>
                        </form>
-                      </div>
+                                 </div>
                 </div>
-         </div>
        </div>
    </div>
 </div>  

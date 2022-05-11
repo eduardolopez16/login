@@ -41,7 +41,7 @@ $routes->match(['get','post'],'tiendas', 'Tiendas::tiendas',['filter'=>'auth']);
 $routes->get('administrar', 'Administrar::administrar',['filter'=>'auth']);
 $routes->match(['get','post'],'profile', 'Users::profile',['filter'=>'auth']);
 $routes->get('tusfilas', 'TusFilas::tusfilas');
-
+$routes->get('operadorfilas', 'OperadorFilas::operadorfilas');
 
 /*
  * --------------------------------------------------------------------
