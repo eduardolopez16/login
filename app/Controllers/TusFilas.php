@@ -6,13 +6,16 @@ use App\Models\TusFilasModel;
 
 class TusFilas extends Controller
 {
-
-    public function tusfilas()
-    
+    public function index()
     {
         echo view('templates/header');
         echo view('tusfilas');
-        echo view('templates/footer');
+        echo view('templates/footer'); 
+
+    }
+    public function tusfilas()
+    
+    {
 
        // $result['data']=$this->TusFilasModel->Getinfo();
      //   $query = $this->TiendasModel->Getinfo();
@@ -36,7 +39,6 @@ class TusFilas extends Controller
     return view('tusfilas',$data);
 
     
-
 
 
     }

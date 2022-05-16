@@ -14,7 +14,7 @@
 
                             <a href="/tusfilas"><button type="button" class="btn btn-primary">Publica tus Filas</button></a>
 
-                            <a href="/operadorfilas"><button type="button" class="btn btn-primary">Operar Fila</button></a>
+                            <a href="/entradasalida"><button type="button" class="btn btn-primary">Operar Fila</button></a>
 
                          
 
