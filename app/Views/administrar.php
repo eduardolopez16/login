@@ -20,6 +20,8 @@
                            <form method="POST" action="/dashboard">
                            <button type="submit" class="btn btn-primary">Volver</Button>
 </form>
+                         <a href="vistasfilas"><button class="btn btn-lg btn-primary"></span>Ingresar a Vistas</button></a>
+
 
                  </div>            
 

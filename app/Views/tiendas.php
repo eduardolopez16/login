@@ -2,6 +2,8 @@
    <div class="row">
         <div class="col-12 col-sm10 offset-sm-2 col-md-6 offset-md-3 mt-5 pt-3 pb-3 bg-white from-wrapper">
              <h3>Registra tu tienda</h3>
+             <a href="/entradasalida"><button class="btn btn-lg btn-primary"></span>Volver <-</button></a>
+
               <hr>
               <?php if (session()->get('success')): ?>
                   <div class="alert alert-success" role="alert">
@@ -33,12 +35,7 @@
                            <div class="col">
                            <button type="submit" class="btn btn-primary">Registrar</Button>                          
 
-                           </form>
-                           <div class="col">
-                       <form method="POST" action="/dashboard">
-                       <button type="submit" class="btn btn-primary">Volver</Button>
-                       </form>
-                                 </div>
+
                 </div>
        </div>
    </div>

@@ -42,6 +42,13 @@ $routes->get('administrar', 'Administrar::administrar',['filter'=>'auth']);
 $routes->match(['get','post'],'profile', 'Users::profile',['filter'=>'auth']);
 $routes->get('tusfilas', 'TusFilas::tusfilas');
 $routes->get('operadorfilas', 'OperadorFilas::operadorfilas');
+$routes->match(['get','post'],'operadorfilasalida', 'OperadorFilaSalida::NumeroSalida');
+$routes->match(['get','post'],'crearfila', 'CrearFila::crearfilas');
+$routes->get('loginqruser', 'LoginQrUser::loginqruser',['filter'=>'noauth']);
+$routes->get('loginqranonimo', 'LoginQrAnonimo::registroanonimo');
+$routes->get('vistasfilas', 'VistasFilas::index');
+$routes->get('vistapantalla', 'VistaPantalla::index');
+
 
 /*
  * --------------------------------------------------------------------

@@ -8,7 +8,7 @@
                    <div class="alert alert-success" role="alert">
                        <?=session()->get('success') ?> 
                 <?php endif;?>
-                <form class="" action="/" method="post">
+                <form class="" action="/loginqruser" method="post">
                  <div class="form-group">
                  <label for="email">Correo</Label>
                  <input type="text" class="form-control" name="email" id="email" value="<?=set_value('email')?>">
@@ -29,10 +29,8 @@
                            <button type="submit" class="btn btn-primary">Ingresa</Button>
                            </div>
                                 <div class="col-12 col-sm-10 text-right">
-                                <a href="/register">¿No tienes una cuenta aun?</a>
-                                <a href="/loginqruser"><button type="button" class="btn btn-primary">QR USER</button></a>
-
-                                </div>
+                                <a href="/loginqranonimo">Ingresar Como anonimo</a>
+                                 </div>
                          </div>
                 </form>
          </div>
