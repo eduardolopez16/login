@@ -48,7 +48,11 @@ $routes->get('loginqruser', 'LoginQrUser::loginqruser',['filter'=>'noauth']);
 $routes->get('loginqranonimo', 'LoginQrAnonimo::registroanonimo');
 $routes->get('vistasfilas', 'VistasFilas::index');
 $routes->get('vistapantalla', 'VistaPantalla::index');
-
+$routes->get('/loginadmin', 'LoginAdmin::index');
+$routes->get('logout', 'Admin::logout');
+$routes->match(['get','post'],'registeradmin', 'LoginAdmin::register');
+$routes->match(['get','post'],'profileadmin', 'LoginAdmin::profile');
+$routes->get('dashboardadmin', 'DashboardAdmin::index',['filter'=>'adminauth']);
 
 /*
  * --------------------------------------------------------------------

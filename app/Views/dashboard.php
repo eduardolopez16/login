@@ -7,16 +7,12 @@
                     
                         <hr>
                            <div class"row">
-                               
-                            <a href="/Administrar"><button type="button" class="btn btn-primary">Administra tus filas</button></a>
 
-                            <a href="/profile"><button type="button" class="btn btn-primary">Usuario</button></a>
+                           <a href="/tusfilas"><button type="button" class="btn btn-primary">Mis filas</button></a>
 
-                            <a href="/tusfilas"><button type="button" class="btn btn-primary">Publica tus Filas</button></a>
-
-                            <a href="/entradasalida"><button type="button" class="btn btn-primary">Operar Fila</button></a>
-
-                            
+                           <a href="/vistapantalla"><button type="button" class="btn btn-primary">¿Cuanto me falta?</button></a>
+    
+                           <a href="/profile"><button type="button" class="btn btn-primary">Modificar mi cuenta</button></a>
 
                     </div>
                          

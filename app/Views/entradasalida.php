@@ -4,7 +4,7 @@
        
         
                 <div class="container">    
-                <a href="/dashboard"><button class="btn btn-lg btn-primary"></span>Volver <-</button></a>
+                <a href="/admindashboard"><button class="btn btn-lg btn-primary"></span>Volver <-</button></a>
                         <hr>
                            <div class"row">
                                <div class="col">

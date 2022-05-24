@@ -34,7 +34,7 @@ class TusFilas extends Controller
     // Ponemos en la 'data transiente' la data que queremos mostrar
     $data['traerfilas'] = $results;
     // Vamos a la vista ... pero con los datos!!!
-    return view('tusfilas',$data);
+    return view('misfilas',$data);
 
 
  

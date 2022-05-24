@@ -4,9 +4,9 @@
 
    
 
-   <?php if($traerfilas): ?>    
+   <?php if($misfilas): ?>    
 <?php
-  foreach ($traerfilas as $allfilas){
+  foreach ($misfilas as $allfilas){
     
     echo $allfilas['fila'];
     echo $allfilas['hora-comienzo'];

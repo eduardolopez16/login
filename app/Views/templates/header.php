@@ -29,7 +29,7 @@
       </li>
 
       <li class="nav-item <?=($uri->getSegment(1) == 'profile' ? 'active' :null )?>">
-        <a class="nav-link" href="/profile">Usuario</a>
+        <a class="nav-link" href="/profile">Cuenta</a>
       </li>
     </ul>
     <ul class="navbar-nav my-2 my-lg-0">
@@ -44,6 +44,10 @@
       </li>
       <li class="nav-item <?=($uri->getSegment(1) == 'register' ? 'active' :null )?>">
         <a class="nav-link" href="/register">Registrarse</a>
+      </li>
+            
+      <li class="nav-item <?=($uri->getSegment(1) == 'loginadmin' ? 'active' :null )?>">
+        <a class="nav-link" href="/loginadmin">Soy Administrador</a>
       </li>
     </ul>
    
