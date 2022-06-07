@@ -7,6 +7,5 @@ class TiendasModel extends Model{
     protected $allowedFields = ['tienda', 'direccion'];
     
 
-    
   
 }

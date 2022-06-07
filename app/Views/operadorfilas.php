@@ -1,34 +1,33 @@
 <?php
 $numero=0;
-if (isset($_POST["numero"])) {
+if ($numero < 30) 
+    if (isset($_POST["numero"])) {
     $numero=(int)$_POST["numero"];
-}
+    }
  
-if (isset($_POST['sumar']))
-{
-	$numero++;
-} elseif (isset($_POST['restar'])) {
-	$numero--;
-}
-if (isset($_POST['uno']))
-{
-	$numero++;
-}
+    if (isset($_POST['sumar']))
+    {
+	  $numero++;
+    } elseif (isset($_POST['restar'])) {
+	  $numero--;
+    }
+    if (isset($_POST['uno']))
+    {
+	  $numero++;
+    }
 
-if (isset($_POST['dos']))
-{
-	$numero=$numero+2;
-}
+    if (isset($_POST['dos']))
+    { $numero=$numero+2; }
 
-if (isset($_POST['tres']))
-{
-	$numero=$numero+3;
-}
+    if (isset($_POST['tres']))
+    {	$numero=$numero+3;}
 
-if (isset($_POST['cuatro']))
+  if (isset($_POST['cuatro']))
 {
 	$numero=$numero+4;
 }
+
+else $numero=30; echo "error";
 ?>
 
 <div class="col-12 col-sm10- offset-sm-2 col-md-6 offset-md-3 mt-5 pt-3 pb-3 bg-white from-wrapper">
@@ -37,17 +36,19 @@ if (isset($_POST['cuatro']))
         <br>
                 <h2 style="text-align:center">Indicar si ingresaron los clientes </h2>
         
-          <form name = "submit" action = "/operadorfilas" method = "POST">  
+          <form class = "" action = "/operadorfilas" method = "post">
+
            <div class="row align-items-start">
              <div class="col-md-6">
                 Numero Virtual
              </div>
               <div class="col-md-3">
-             <input type="hidden" name="numero" value="<?php echo $numero?>">
-             <input type = "submit" name = "sumar" class="btn btn-lg btn-success" value = "SI">            
+              <input type="hidden" name="numero" value="<?php echo $numero?>">
+              <input type="hidden" class="form-control" name="contador" id="contador" value="<?=set_value("numero")?>">
+             <input type = "submit" name = "sumar" name="contador" id="contador" class="btn btn-lg btn-success" value = "SI" value="<?=set_value("numero")?>" >   
              </div>
              <div class="col-md-3">
-             <input type = "submit" name = "restar" class="btn btn-lg btn-danger"  value = "NO">
+             <input type = "submit" name = "restar" class="btn btn-lg btn-danger" value = "NO">
              </div>
           </div>
           <br>
@@ -83,7 +84,6 @@ if (isset($_POST['cuatro']))
         <input type = "submit" name = "cuatro" class="btn btn-lg btn-success" value = "4">    
        </div>
     </div> 
-
     </form>
 
 

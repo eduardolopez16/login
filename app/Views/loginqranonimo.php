@@ -26,7 +26,7 @@
                                   </div> 
                                   <div class="col-12 col-sm-6 ">
                                    <div class="form-group">
-                                   <label for="cantidadacompañanates">Ingresa cantidad de acompañantes</Label>
+                                   <label for="cantidadacompañantes">Ingresa cantidad de acompañantes</Label>
                                    <input type="number" class="form-control" name="cantidadacompañantes" id="cantidadacompañantes" value="<?=set_value('cantidadacompañantes')?>">
                                    </div>
                                    </div> 
@@ -41,6 +41,7 @@
 
                                 <div class="col-12 col-sm-10 text-right">
                                 <a href="/register">Crea tu Cuenta</a>
+                                <button type="submit" class="btn btn-primary">Registrar</Button> 
                                 </div>
                          </div>
                 </form>

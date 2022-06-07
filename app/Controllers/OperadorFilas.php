@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Models\ContadorModel;
+
 class OperadorFilas extends BaseController
 {
     public function operadorentrada()
@@ -11,7 +13,34 @@ class OperadorFilas extends BaseController
         echo view('templates/footer');
 
             
-         
+        if(!session()->get('isLoggedIn'))
+        redirect()->to('/');
+        
+        $data =[];
+        helper(['form']);
+        
+        if ($this->request->getMethod() == 'post'){
+            $id=1;
+                $model = new ContadorModel();
+    
+            
+            $newData = [
+            'id'=> ('id'),
+            'contador' => $this->request->getVar('contador'),
+            'maximo' => $this->request->getVar('maximo'),       
+        ];
+    }
+        $model->update($id, $newData);
+        $session = session();
+       // $session->setFlashdata('success', 'Tienda Registrada');
+        //return redirect()->to('/');
+    
+        $data['user'] = $model->where('id', session()->get('id'))->first();
+    
+    
+    
+             
+       
            
 
 
@@ -21,18 +50,6 @@ class OperadorFilas extends BaseController
 
 { return "hola";}
  
-
-
-
-
-
-
-
-
-
-
-
-
     
     public function NumeroSalida(){
         
@@ -72,5 +89,39 @@ class OperadorFilas extends BaseController
 
 
    }    
-       }
+
+   public function contadoringreso(){
+
+    if(!session()->get('isLoggedIn'))
+    redirect()->to('/');
+
+    $data =[];
+    helper(['form']);
+    
+    if ($this->request->getMethod() == 'post'){
+       
+            $model = new ContadorModel();
+
+        
+        $newData = [
+        'contador' => $this->request->getVar('contador'),
+        'maximo' => $this->request->getVar('maximo'),       
+    ];
+}
+    $model->save($newData);
+    $session = session();
+    $session->setFlashdata('success', 'Tienda Registrada');
+    //return redirect()->to('/');
+
+    $data['user'] = $model->where('id', session()->get('id'))->first();
+
+
+
+         }
+   
+        
+
+}
+//------------------
+       
 

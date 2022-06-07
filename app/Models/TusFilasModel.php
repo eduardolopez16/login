@@ -3,21 +3,30 @@
 use CodeIgniter\Model;
 
 class TusFilasModel extends Model{
-   protected $table = 'filas';
-  protected $allowedFields = ['nombre-fila', 'hora-comienzo','hora-termino','dias-disponibles'];
+   
+ // protected $table = 'filas';
+  //protected $allowedFields = ['fila', 'hora-comienzo','hora-termino','id-fila'];
     
-   function TusFilasModel(){
-  
-   }
-   public function Getinfo(){
-    $table = new \CodeIgniter\View\Table();
-    $db = \Config\Database::connect();
 
-    $query = $db->query('SELECT * FROM filas');
-    $results = $query->getResult();
+  // public function Getinfo(){
+   // $table = new \CodeIgniter\View\Table();
+    //$db = \Config\Database::connect();
+
+   // $query = $db->query('SELECT * FROM filas');
+   // $results = $query->getResult();
 
 
- }
+ //}
+
+ 
+
+  /*View*/
+    function display_records()
+  {
+    $query=$this->db->get("filas");
+    return $query->result();
+  }
+	
     
 
 }
